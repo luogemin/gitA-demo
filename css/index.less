@@ -3,10 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+li {
+    list-style: none;
+  }
+/* 声明字体*/
+@font-face {
+font-family: electronicFont;
+src: url(../font/DS-DIGIT.TTF);
+}
 body {
     background: url('../images/bg.jpg') no-repeat top center;
     min-width: 12.8rem;  
-    line-height: 1.15;
+    line-height: 1;
 }
 header{
     position: relative;
@@ -26,5 +34,86 @@ header{
         line-height: 0.9375rem;
         font-size: 0.25rem;
         color: aliceblue;
+    }
+}
+.mainBox{
+    display: flex;
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0.125rem 0.125rem 0;
+    .column{
+        flex: 3;
+    }
+    .column:nth-child(2){
+        flex: 5;
+        margin: 0 0.125rem 0.1875rem;
+    }
+    .panel{
+        position: relative;
+        height: 3.875rem;
+        padding: 0 0.1875rem 0.5rem;
+        border: 1px solid rgba(25,186,139,0.17);
+        margin-bottom: 0,1857rem;
+        background: url('../images/line\(1\).png') rgba(255, 255, 255, 0.04);
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-left: 2px solid #02a6b5;
+            border-top: 2px solid #02a6b5;
+            content:"";
+        }
+        &::after{
+            position: absolute;
+            top: 0;
+           right: 0;
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid #02a6b5;
+            border-top: 2px solid #02a6b5;
+            content:"";
+        }
+        .panel-footer{
+            &::before{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 10px;
+                height: 10px;
+                border-left: 2px solid #02a6b5;
+                border-bottom: 2px solid #02a6b5;
+                content:"";
+            }
+            &::after{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 10px;
+                height: 10px;
+                border-right: 2px solid #02a6b5;
+                border-bottom: 2px solid #02a6b5;
+                content:"";
+            }
+        }
+        h2{
+            height: 0.6rem;
+            line-height: 0.6rem;
+            font-size: 0.25rem;
+            text-align: center;
+            color: #fff;
+            font-weight: 400;
+        }
+        .chart{
+            // background-color: aqua;
+            height: 3rem;
+        }
+
+    }
+    .no{
+        background: rgba(101, 132, 266, 0.1);
+        padding: 0.1875rem;
     }
 }
